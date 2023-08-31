@@ -58,3 +58,23 @@ select * from book
 -- 단 not in 연산자를 사용하지 마시오.(비교연산자와 and 연산자 사용)
 select * from book
         where publisher<>'굿스포츠' AND publisher<>'해냄' AND publisher<>'웅진지식하우스';
+-- book 테이블에서 도서명이 축구의 역사인 행을 검색하시오.
+select * from book
+        where bookname='축구의 역사';
+
+select * from book
+        where bookname LIKE '축구의 역사';
+
+-- book 테이블에서 도서명에 '축구'라는 문자열이 포함된 행을 검색하시오.
+select * from book
+        where bookname LIKE '%축구%';
+
+-- book 테이블에서 도서명이 '과학'이라는 문자열이 포함된 행을 검색하시오.
+select * from book
+        where bookname LIKE '%과학%';
+-- book 테이블에서 도서명이 '과학'이라는 문자열로 끝나는 행을 검색하시오.
+select * from book
+        where bookname LIKE '%과학';
+-- book 테이블에서 도서명에 '의'자 앞에 임의의 3글자가 포함된 문자열을 갖는 행을 검색하시오.
+select * from book
+        where bookname LIKE '___의%';
